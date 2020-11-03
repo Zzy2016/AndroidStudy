@@ -1,0 +1,70 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<button id="TencentCaptcha"-->
+<!--        data-appid="1304029854"-->
+<!--        data-cbfn="callback"-->
+<!--        type="button"-->
+<!--&gt;验证-->
+<!--</button>-->
+<!--<script>-->
+<!--    window.callback = function(res){-->
+<!--        console.log(res)-->
+<!--        // res（用户主动关闭验证码）= {ret: 2, ticket: null}-->
+<!--        // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}-->
+<!--        if(res.ret === 0){-->
+<!--            alert(res.ticket)   // 票据-->
+<!--            android.showLog(res.ticket)-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+</head>
+<body >
+
+</body>
+<script>
+    // window.callback = function(res){
+    //     console.log(res)
+    //     // res（用户主动关闭验证码）= {ret: 2, ticket: null}
+    //     // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
+    //     if(res.ret === 0){
+    //         alert(res.ticket)   // 票据
+    //     }
+    // }
+
+<!--    var captcha1 = new TencentCaptcha('1302947595', function(res) {-->
+<!--        console.log(res)-->
+<!--        // res（用户主动关闭验证码）= {ret: 2, ticket: null}-->
+<!--        // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}-->
+<!--        if(res.ret === 0){-->
+<!--            alert(res.ticket)   // 票据-->
+<!--            android.showLog(res.ticket)-->
+<!--        }-->
+<!--    });-->
+
+var sdkOptions = {"sdkOpts": {"width": 1000, "height": 1000}};
+     var captcha1 = new TencentCaptcha('1302947595', function (res) {/* callback */
+        if (res.ret === 0) {
+            alert("111111")   // 票据
+            android.showLog(res.ticket)
+        }
+    });
+    captcha1.show(); // 显示验证码
+
+</script>
+
+</html>
