@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/aboutback" />
             <option value="$PROJECT_DIR$/aboutwidget" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/databindtest" />
             <option value="$PROJECT_DIR$/jsouptest" />
             <option value="$PROJECT_DIR$/viewbindtest" />
           </set>
