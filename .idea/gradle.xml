@@ -5,22 +5,25 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="testRunner" value="PLATFORM" />
+        <option name="disableWrapperSourceDistributionNotification" value="true" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/aboutback" />
-            <option value="$PROJECT_DIR$/abouttest" />
+            <option value="$PROJECT_DIR$/ViewStubTest" />
             <option value="$PROJECT_DIR$/aboutwidget" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bindrecyclerview" />
             <option value="$PROJECT_DIR$/databindtest" />
             <option value="$PROJECT_DIR$/jsouptest" />
+            <option value="$PROJECT_DIR$/myapplication" />
+            <option value="$PROJECT_DIR$/recyclerviewbind" />
             <option value="$PROJECT_DIR$/viewbindtest" />
-            <option value="$PROJECT_DIR$/windowtest" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>

@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--import -->
 
     <data>
-        <variable name="user" type="com.example.databindtest.User"/>
+
+
+        <!--import  导入类 类名冲突时，Alias区别不同的类-->
+        <import type="android.view.View" />
+
+
+        <!--variable 可以在布局上设置、并将在布局文件中的绑定表达式中使用的属性-->
+        <variable
+            name="user"
+            type="com.example.databindtest.User" />
+
+        <variable
+            name="onClickTest"
+            type="com.example.databindtest.MainActivity.SendClass" />
+
+        <import type="java.util.List"/>
+        <import type="java.util.Map"/>
+
+        <variable
+            name="map"
+            type="Map&lt;String,String>" />
+<!--        List&lt;String-->
+        <variable
+            name="list"
+            type="List&lt;String>" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
+
+
+        <include layout="@layout/item" />
+
 
         <ImageView
             android:id="@+id/imgLogo"
@@ -28,41 +57,85 @@
             android:layout_height="40dp"
             android:layout_marginTop="50dp"
             android:background="#cccccc"
-            android:hint="@{user.firstName}"
+            android:text='@{map["key1"]}'
             android:maxLength="11"
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imgLogo" />
 
-        <EditText
+        <TextView
             android:id="@+id/etPwd"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
             android:background="#cccccc"
-            android:hint="密码"
+            android:padding="@{@dimen/dp_20}"
             android:maxLength="11"
+            android:text="@{user.lastName}"
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etAccount" />
 
 
+        <!--监听器绑定 监听器绑定是在事件发生时运行的绑定表达式。方法的参数必需与事件监听器的参数匹配-->
         <Button
             android:id="@+id/btn"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="100dp"
-            android:background="#248cfa"
-            android:text="Login"
+            android:onClick="@{()->onClickTest.sendXml(btn)}"
             android:textSize="20sp"
+
+            android:visibility="@{user.firstName.length() >5 ?View.GONE:View.VISIBLE}"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/etPwd" />
 
+        <!--方法引用 方法引用和监听器绑定之间的主要区别在于实际监听器实现是在绑定数据时创建的，而不是在事件触发时创建的。-->
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#248cfa"
+            android:onClick="@{onClickTest.sendHtml}"
+            android:text="@{user.firstName ?? btn2.text }"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#248cfa"
+            android:onClick="@{onClickTest.sendXml}"
+            android:text="Login"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#248cfa"
+            android:text="@{list[2]}"
+            android:onClick="@{()->onClickTest.sendText()}"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn2" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
 
 
 

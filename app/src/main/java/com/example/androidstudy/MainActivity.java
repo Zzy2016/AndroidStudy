@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         String path1 = "http://192.168.1.176:1185/user/weiXinUser/getWeChatBindingState";
 
-       @SuppressLint("ServiceCast") TelephonyManager telephonyManager = (TelephonyManager) getSystemService(TELECOM_SERVICE);
+        @SuppressLint("ServiceCast") TelephonyManager telephonyManager = (TelephonyManager) getSystemService(TELECOM_SERVICE);
 
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
@@ -104,10 +104,10 @@ public class MainActivity extends AppCompatActivity {
                             System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
                         }
 
-                        Log.e("-----------1",response.body().string());
+                        Log.e("-----------1", response.body().string());
 
                     } else {
-                        Log.e("-----------2","response.body().string()");
+                        Log.e("-----------2", "response.body().string()");
                     }
                 } catch (IOException e) {
                     e.printStackTrace();

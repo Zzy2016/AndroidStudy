@@ -1,19 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SecondActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2"
-        android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        />
+    <data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!--        可观察数据对象  单个字段-->
+        <variable
+            name="user1"
+            type="com.example.databindtest.User" />
+
+        <variable
+            name="onclick"
+            type="com.example.databindtest.SecondActivity.Click" />
+
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SecondActivity">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="#248cfa"
+            android:gravity="center"
+            android:onClick="@{()->onclick.onClickTest(user1)}"
+            android:text="@{user1.firstName}"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="#248cfa"
+            android:gravity="center"
+            android:onClick="@{()->onclick.onClickTest(user1)}"
+            android:text="@{user1.firstName}"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="#248cfa"
+            android:gravity="center"
+            android:onClick="@{()->onclick.onClickTest(user1)}"
+            android:text="@{user1.firstName}"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="#248cfa"
+            android:gravity="center"
+            android:onClick="@{()->onclick.onClickTest(user1)}"
+            android:text="@{user1.firstName}"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
+
+
+    </LinearLayout>
+</layout>
