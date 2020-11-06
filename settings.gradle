@@ -1,3 +1,4 @@
+include ':lifecycletest'
 include ':livedatatest'
 include ':bindrecyclerview'
 include ':ViewStubTest'
