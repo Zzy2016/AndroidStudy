@@ -27,9 +27,15 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    viewBinding{
-        enabled = true
+//    buildFeatures{
+//        viewBinding true
+//    }
+
+    dataBinding{
+        enabled= true
     }
+
+
 
 }
 

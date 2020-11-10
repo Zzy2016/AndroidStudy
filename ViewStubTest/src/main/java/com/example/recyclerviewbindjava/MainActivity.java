@@ -1,7 +1,7 @@
 package com.example.recyclerviewbindjava;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
+
 
 import android.os.Bundle;
 import android.view.View;
@@ -30,45 +30,47 @@ public class MainActivity extends AppCompatActivity {
 //        binding = ActivityMainBinding.inflate(getLayoutInflater());
 //        setContentView(binding.getRoot());
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-
-
-        binding.tv1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                if (viewStub == null) {
-                    try {
-                        viewStub = binding.viewStub.inflate();
-
-                    } catch (Exception e) {
-
-                    }
-                } else {
-                    binding.viewStub.setVisibility(View.VISIBLE);
-                }
-
-
-                i = 1;
-            }
-        });
-
-
-        binding.tv2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                i = 0;
-                binding.viewStub.setVisibility(View.INVISIBLE);
-            }
-        });
-
-        binding.tv3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+//        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+//
+//
+//
+//
+//        binding.tv1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//                if (viewStub == null) {
+//                    try {
+//                        viewStub = binding.viewStub.inflate();
+//
+//                    } catch (Exception e) {
+//
+//                    }
+//                } else {
+//                    binding.viewStub.setVisibility(View.VISIBLE);
+//                }
+//
+//
+//                i = 1;
+//            }
+//        });
+//
+//
+//        binding.tv2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                i = 0;
+//                binding.viewStub.setVisibility(View.INVISIBLE);
+//            }
+//        });
+//
+//        binding.tv3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
 
     }
 }

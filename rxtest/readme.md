@@ -1,0 +1,7 @@
+Observable
+Observer
+subscribe
+事件
+Observable通过注册或者订阅在状态更改的时候通知Observer
+
+线程控制
