@@ -19,6 +19,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 
 import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -76,25 +78,27 @@ public class MVVMViewModel extends ViewModel {
 
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("phone", "17635663998");
+            jsonObject.put("phone", binding.etAccount.getText().toString());
             jsonObject.put("osName", "Android");
             jsonObject.put("passwordMD5", binding.etPwd.getText().toString());
             jsonObject.put("version", "v2.1.1");
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
 
 
+        final RequestBody requestBody = FormBody.create(MediaType.parse("application/json;charset=UTF-8"), jsonObject.toString());
 
-        mvvmModel.doLogin(jsonObject, new Callback() {
+
+        mvvmModel.doLogin(requestBody, new Callback<LoginNativeResult>() {
             @Override
-            public void onResponse(Call call, Response response) {
-                Log.e("登录1", "");
+            public void onResponse(Call<LoginNativeResult> call, Response<LoginNativeResult> response) {
+                Log.e("登录------------1",response.body().getStatus()+"  "+response.body().getDesc());
             }
 
             @Override
-            public void onFailure(Call call, Throwable t) {
-                Log.e("登录0", t.toString());
+            public void onFailure(Call<LoginNativeResult> call, Throwable t) {
+                Log.e("登录------------0",t.toString()+"  ");
             }
         });
     }

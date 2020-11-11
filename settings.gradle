@@ -1,3 +1,4 @@
+include ':myapplication'
 include ':logintest'
 include ':rxtest1'
 include ':rxtest'

@@ -10,6 +10,7 @@ import okhttp3.FormBody;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -35,7 +36,7 @@ public class MVVMModel {
     }
 
     //    vcode passwordMD5 osName version  phone
-    public void doLogin(JSONObject map, Callback callback) {
+    public void doLogin(RequestBody requestBody, Callback<LoginNativeResult> callback) {
 
 //        通过拦截添加参数
 //        "Content-Type: application/json", "Charset: UTF-8", "accept: application/json","Connection: Keep-Alive"
@@ -57,7 +58,7 @@ public class MVVMModel {
                 .client(okHttpClient)
                 .build();
         GetService getService = retrofit.create(GetService.class);
-        Call<LoginNativeResult> call = getService.loginResult(map);
+        Call<LoginNativeResult> call = getService.loginResult(requestBody);
         call.enqueue(callback);
     }
 }
