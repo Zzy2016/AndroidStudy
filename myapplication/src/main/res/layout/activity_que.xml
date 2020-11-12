@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".QueActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+
+        <import type="java.util.List" />
+
+        <variable
+            name="list"
+            type="List&lt;String>" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        tools:context=".QueActivity">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#ffffff"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListOption"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="100dp"
+            android:background="#ffffff"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvLeft"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="返回"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="#248cfa"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tvRight"
+            app:layout_constraintTop_toBottomOf="@id/rvListOption" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="下一题"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="#248cfa"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tvLeft"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvListOption" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
