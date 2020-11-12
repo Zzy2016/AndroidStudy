@@ -14,16 +14,33 @@
 
 
         <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tabMode="scrollable"
+            app:layout_constraintTop_toBottomOf="@id/tabLayoutMonth"
+            app:tabMode="scrollable" />
 
-            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
+        <com.example.myapplication.CustomSelectView
+            android:id="@+id/dateSelectView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
 
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvDate" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
