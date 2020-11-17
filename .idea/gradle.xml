@@ -20,8 +20,11 @@
             <option value="$PROJECT_DIR$/lifecycletest" />
             <option value="$PROJECT_DIR$/livedatatest" />
             <option value="$PROJECT_DIR$/logintest" />
+            <option value="$PROJECT_DIR$/mvctest" />
+            <option value="$PROJECT_DIR$/mvvmtest" />
             <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/recyclerviewbind" />
+            <option value="$PROJECT_DIR$/roomtest" />
             <option value="$PROJECT_DIR$/rxtest" />
             <option value="$PROJECT_DIR$/rxtest1" />
             <option value="$PROJECT_DIR$/viewbindtest" />

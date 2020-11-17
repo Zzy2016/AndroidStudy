@@ -1,3 +1,6 @@
+include ':mvctest'
+include ':roomtest'
+include ':mvvmtest'
 include ':myapplication'
 include ':logintest'
 include ':rxtest1'
