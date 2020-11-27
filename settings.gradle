@@ -1,3 +1,5 @@
+include ':webview1'
+include ':k'
 include ':mvctest'
 include ':roomtest'
 include ':mvvmtest'

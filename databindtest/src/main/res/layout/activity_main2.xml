@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="goods"
+            type="com.example.databindtest.Goods" />
+
+        <variable
+            name="test"
+            type="com.example.databindtest.TestSelect" />
+
+        <variable
+            name="testHandler"
+            type="com.example.databindtest.MainActivity2.TestHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity2">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@{goods.details}"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@={goods.details}" />
+
+        <TextView
+            android:id="@+id/t1v"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@{goods.name}"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/e1t"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@={goods.name}" />
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:checked="@{test.isSelect}"
+            android:onCheckedChanged="@{(checkBox,is)->testHandler.doSelect()}"
+            />
+
+    </LinearLayout>
+</layout>

@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.recyclerviewbindjava.databinding.ActivityMainBinding;
+
 
 /*
 * ViewStub  是一个大小为0 ，默认不可见的控件，只有给他设置成了View.Visible或调用了它的inflate()之后才会填充布局资源，也就是说占用资源少。
@@ -17,7 +17,7 @@ android:inflatedId或者调用ViewStub的setInflatedId方法为懒加载视图�
 * */
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
+//    ActivityMainBinding binding;
 
     int i = 0;
 

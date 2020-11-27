@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="goods"
+            type="com.example.databindtest.Goods" />
+
+        <variable
+            name="goodHandler"
+            type="com.example.databindtest.ThriedActivity.GoodsHandler" />
+
+        <variable
+            name="test"
+            type="com.example.databindtest.Test" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fafafa"
+        android:orientation="vertical"
+        tools:context=".ThriedActivity">
+
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ffffff"
+            android:gravity="left|center_vertical"
+            android:text="@{goods.name}"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@={goods.name}"
+            />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:gravity="left|center_vertical"
+            android:text="@{goods.details}"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:gravity="left|center_vertical"
+            android:text="@{String.valueOf(goods.price)}"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:gravity="left|center_vertical"
+            android:text="@{test.name}"
+            android:textSize="15sp" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:onClick="@{()->goodHandler.changeGoodsName()}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:onClick="@{()->goodHandler.changeGoodsDetails()}" />
+
+
+
+
+
+    </LinearLayout>
+</layout>
