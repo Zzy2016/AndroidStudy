@@ -5,7 +5,9 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.RelativeLayout;
+import android.widget.SeekBar;
 
 import com.example.bindrecyclerview.databinding.ActivityMainBinding;
 
@@ -48,5 +50,7 @@ public class MainActivity extends AppCompatActivity {
         FirstAdapter firstAdapter = new FirstAdapter(MainActivity.this,firstList,secondList);
         binding.rv.setAdapter(firstAdapter);
         binding.rv.setItemViewCacheSize(500);
+
+
     }
 }

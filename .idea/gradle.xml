@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bindrecyclerview" />
             <option value="$PROJECT_DIR$/databindtest" />
+            <option value="$PROJECT_DIR$/imageselect" />
             <option value="$PROJECT_DIR$/jsouptest" />
             <option value="$PROJECT_DIR$/k" />
             <option value="$PROJECT_DIR$/lifecycletest" />
@@ -25,6 +26,8 @@
             <option value="$PROJECT_DIR$/mvvmtest" />
             <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/recyclerviewbind" />
+            <option value="$PROJECT_DIR$/recyclerviewwithbind" />
+            <option value="$PROJECT_DIR$/retrofit_livedata" />
             <option value="$PROJECT_DIR$/roomtest" />
             <option value="$PROJECT_DIR$/rxtest" />
             <option value="$PROJECT_DIR$/rxtest1" />

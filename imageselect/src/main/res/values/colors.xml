@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="textBlack">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#d8d8d8</color>
+    <color name="gray99">#999999</color>
+    <color name="trans">#00ffffff</color>
+    <color name="blue">#248cfa</color>
+
+    <color name="yellow">#F5A623</color>
+    <color name="textGreen">#6AB316</color>
+    <color name="error">#eb5463</color>
+
+    <color name="yellowMsg">#FA8512</color>
+</resources>
