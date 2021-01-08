@@ -33,11 +33,7 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
 
-//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PERMISSION_GRANTED) {
-//
-//        } else {
-//
-//        }
+
 
         ActivityCompat.requestPermissions(this, permissions, 1);
 
@@ -76,43 +72,22 @@ public class MainActivity2 extends AppCompatActivity {
 
 
 
-            File file1 = getFilesDir();
-            Log.e("文件  ", file1.getAbsolutePath() + "  " + file1.exists());
-            File file2 = new File(file1, "123.jpg");
-            File file3 = new File(file1, "123456.jpg");
-            File file4 = new File(file1, "123456789.jpg");
-            Log.e("文件 ", file2.exists() + "file2");
-            file2.createNewFile();
-            file3.createNewFile();
-            file4.createNewFile();
-            Log.e("文件 ", file2.exists() + "file211");
+//            File file1 = getFilesDir();
+//            Log.e("文件  ", file1.getAbsolutePath() + "  " + file1.exists());
+//            File file2 = new File(file1, "123.jpg");
+//            File file3 = new File(file1, "123456.jpg");
+//            File file4 = new File(file1, "123456789.jpg");
+//            Log.e("文件 ", file2.exists() + "file2");
+//            file2.createNewFile();
+//            file3.createNewFile();
+//            file4.createNewFile();
+//            Log.e("文件 ", file2.exists() + "file211");
 
-            File[] files = file1.listFiles();
+//            File[] files = file1.listFiles();
 
-            for (File item : files) {
-                Log.e("内部粗出", item.getAbsolutePath() + "  " + item.length());
-            }
-
-//            File file = new File(getExternalFilesDir("").getAbsoluteFile() + "/banner/a.jpg");
-//            File file = new File(getFilesDir(DIRECTORY_PICTURES).getAbsolutePath() + "/banner1/b.text");
-//
-//            if (!file.getParentFile().exists()) {
-//                file.getParentFile().mkdirs();
+//            for (File item : files) {
+//                Log.e("内部粗出", item.getAbsolutePath() + "  " + item.length());
 //            }
-//            if (!file.exists()) {
-//                file.createNewFile();
-//
-//            } else {
-//
-//            }
-//            File file = new File(getFilesDir(), "/banner1/c.jpg");
-//            if (!file.getParentFile().exists()) {
-//                file.getParentFile().mkdirs();
-//            }
-//            if (!file.exists()) {
-//                file.createNewFile();
-//            }
-
 
         } catch (Exception e) {
             Log.e("image---", e.toString());

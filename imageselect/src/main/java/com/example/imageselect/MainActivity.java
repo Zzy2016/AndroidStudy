@@ -83,12 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (MAX == 1) {
-//                    if (binding.clImgBig.getVisibility() == View.VISIBLE) {
-//                        Intent intent = new Intent();
-//                        intent.putExtra("IMAGE_FROM_ALBUM", list.get(binding.vpImage.getCurrentItem()));
-//                        setResult(0, intent);
-//                    }
-//                    finish();
+
                 }
 
                 if (imgAdapter.getSelectList().size() > 0) {
@@ -106,8 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 if (binding.clImgBig.getVisibility() == View.VISIBLE) {
                     binding.clImgBig.setVisibility(View.GONE);
 
-//                    imgAdapter.setSelectList(imageSelect);
-//                    imgAdapter.setImageModels(imageModels);
+
                     imgAdapter.notifyDataSetChanged();
                     modifyClick();
                 } else {
@@ -161,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
                 MediaStore.MediaColumns.SIZE + ">0",
                 null,
                 MediaStore.Images.Media.DATE_ADDED + " DESC");
+
+
 
 
         if (mCursor != null) {

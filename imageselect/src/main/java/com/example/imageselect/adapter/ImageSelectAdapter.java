@@ -34,33 +34,12 @@ public class ImageSelectAdapter extends RecyclerView.Adapter<ImageSelectAdapter.
 
     private int max = 5;
 
-//    public void setImageModels(List<ImageModel> imageModels) {
-//        this.imageModels = imageModels;
-//    }
-//
-//    public void setSelectList(List<Image> selectList) {
-//        this.selectList = selectList;
-//    }
-
     public ImageSelectAdapter(List<Image> list, Context context) {
         this.list = list;
         this.context = context;
-
         selectList = new ArrayList<>();
-
-//        imageModels = new ArrayList<>();
-//        for (Image item : list) {
-//            ImageModel imageModel = new ImageModel();
-//            imageModel.setSelect(false);
-//            imageModel.setPath(item.getPath());
-//            imageModels.add(imageModel);
-//        }
-
     }
 
-//    public List<ImageModel> getImageModels() {
-//        return imageModels;
-//    }
 
     public void setMax(int max) {
         this.max = max;
