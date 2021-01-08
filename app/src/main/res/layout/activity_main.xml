@@ -9,9 +9,19 @@
 
     <ImageView
         android:id="@+id/img"
+        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/et"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:inputType="numberSigned"
+        android:digits="0123456789X"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

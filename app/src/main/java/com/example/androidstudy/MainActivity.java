@@ -19,9 +19,9 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-
-import com.bumptech.glide.Glide;
-import com.example.androidstudy.databinding.ActivityMainBinding;
+//
+//import com.bumptech.glide.Glide;
+//import com.example.androidstudy.databinding.ActivityMainBinding;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -29,36 +29,36 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
+//    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+//        binding = ActivityMainBinding.inflate(getLayoutInflater());
+//        setContentView(binding.getRoot());
 
         String path = "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTItviaTuziacQEGrzqiaV3lMddYMCcBJWLibxeo1ia8sEPyiacibIOsLUmPdJQRHPvFYblBgoSiboznzRst4Q/132";
 
 //        Glide.with(this).load(path).into(binding.img);
 
-        String path1 = "http://192.168.1.176:1185/user/weiXinUser/getWeChatBindingState";
-
-        @SuppressLint("ServiceCast") TelephonyManager telephonyManager = (TelephonyManager) getSystemService(TELECOM_SERVICE);
-
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        Log.e("----imei", telephonyManager.getDeviceId().toString());
+//        String path1 = "http://192.168.1.176:1185/user/weiXinUser/getWeChatBindingState";
+//
+//        @SuppressLint("ServiceCast") TelephonyManager telephonyManager = (TelephonyManager) getSystemService(TELECOM_SERVICE);
+//
+//
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+//            // TODO: Consider calling
+//            //    ActivityCompat#requestPermissions
+//            // here to request the missing permissions, and then overriding
+//            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//            //                                          int[] grantResults)
+//            // to handle the case where the user grants the permission. See the documentation
+//            // for ActivityCompat#requestPermissions for more details.
+//            return;
+//        }
+//        Log.e("----imei", telephonyManager.getDeviceId().toString());
 //        OkHttpClient okHttpClient = new OkHttpClient.Builder().addNetworkInterceptor(new LoggingInterceptor()).build();
 //        FormBody formBody = new FormBody.Builder().add("openid", "").build();
 //        OkHttpClient okHttpClient=new OkHttpClient();
@@ -91,30 +91,30 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    OkHttpClient okHttpClient1 = new OkHttpClient();
-                    Request request = new Request.Builder().url("https://publicobject.com/helloworld.txt").build();
-                    Response response = okHttpClient1.newCall(request).execute();
-                    if (response.isSuccessful()) {
-                        Headers responseHeaders = response.headers();
-                        for (int i = 0; i < responseHeaders.size(); i++) {
-                            System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
-                        }
-
-                        Log.e("-----------1", response.body().string());
-
-                    } else {
-                        Log.e("-----------2", "response.body().string()");
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        }).start();
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    OkHttpClient okHttpClient1 = new OkHttpClient();
+//                    Request request = new Request.Builder().url("https://publicobject.com/helloworld.txt").build();
+//                    Response response = okHttpClient1.newCall(request).execute();
+//                    if (response.isSuccessful()) {
+//                        Headers responseHeaders = response.headers();
+//                        for (int i = 0; i < responseHeaders.size(); i++) {
+//                            System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
+//                        }
+//
+//                        Log.e("-----------1", response.body().string());
+//
+//                    } else {
+//                        Log.e("-----------2", "response.body().string()");
+//                    }
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//
+//            }
+//        }).start();
 
     }
 
