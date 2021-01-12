@@ -1,15 +1,5 @@
 package com.example.imageselect;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-
 import android.Manifest;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -27,10 +17,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import com.bumptech.glide.Glide;
-import com.example.imageselect.adapter.ImageShowIconAdapter;
 import com.example.imageselect.adapter.ImageSelectAdapter;
-import com.example.imageselect.databinding.ActivityMainBinding;
+import com.example.imageselect.adapter.ImageShowIconAdapter;
+
 
 import java.util.ArrayList;
 import java.util.List;
