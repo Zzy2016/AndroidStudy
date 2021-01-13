@@ -1,4 +1,4 @@
-package com.example.androidstudy;
+package com.example.androidstudy.config;
 
 import android.app.Activity;
 import android.app.Application;

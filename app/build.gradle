@@ -40,20 +40,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-//    implementation 'com.github.bumptech.glide:glide:4.4.0'
-//    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
-//    implementation 'jp.wasabeef:glide-transformations:2.0.2'
-//    implementation 'com.squareup.okhttp3:okhttp:4.9.0'//图形变换依赖库
-//
-//    implementation "android.arch.lifecycle:common-java8:1.1.1"
-//
-//    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-//    implementation 'androidx.lifecycle:lifecycle-extensions:+'
-//
-//    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-//    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
-//    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-
 
     //Qmui
     implementation 'com.qmuiteam:qmui:2.0.0-alpha02'
@@ -77,4 +63,18 @@ dependencies {
 
     //glide 高斯模糊
     implementation 'jp.wasabeef:glide-transformations:4.1.0'
+
+    //banner
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.0'
+
+    //下拉刷新
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.0-alpha-1'      //核心必须依赖
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.0-alpha-1'
+    implementation  'com.scwang.smart:refresh-header-two-level:2.0.0-alpha-1'   //二级刷新头
+
+    //agentweb (WebView)
+    implementation 'com.just.agentweb:agentweb:4.1.2'
+
+    //hawk数据存储
+    implementation "com.orhanobut:hawk:2.0.1"
 }
