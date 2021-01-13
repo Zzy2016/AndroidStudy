@@ -26,16 +26,10 @@ import io.reactivex.functions.Consumer;
 
 public class SplashViewModel extends BaseViewModel {
 
-
-
-
     private MutableLiveData<ImageBean> mImage;
-
     private MutableLiveData<String> mTimer;
     private MutableLiveData<ActivitySkip> mActivitySkip;
-
     private String url;
-
 
     public SplashViewModel() {
         mActivitySkip=new MutableLiveData<>();
@@ -126,6 +120,27 @@ public class SplashViewModel extends BaseViewModel {
         activitySkip.setmActivity("DetailsActivity");
         activitySkip.setParam1(url);
         mActivitySkip.postValue(activitySkip);
+    }
+
+
+    @Override
+    public void onStart(@NonNull LifecycleOwner owner) {
+
+    }
+
+    @Override
+    public void onResume(@NonNull LifecycleOwner owner) {
+
+    }
+
+    @Override
+    public void onPause(@NonNull LifecycleOwner owner) {
+
+    }
+
+    @Override
+    public void onStop(@NonNull LifecycleOwner owner) {
+
     }
 
     @Override

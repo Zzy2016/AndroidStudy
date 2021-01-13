@@ -13,7 +13,6 @@ import com.example.androidstudy.http.data.HttpDisposable;
 import com.example.androidstudy.http.request.HttpFactory;
 import com.example.androidstudy.http.request.HttpRequest;
 
-import retrofit2.Response;
 
 public abstract class BaseViewModel extends ViewModel implements DefaultLifecycleObserver {
 
